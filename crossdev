@@ -191,7 +191,7 @@ parse_target() {
 				CTARGET="aarch${CTARGET#arm}-unknown-linux-gnu";;
 			arm*)
 				CTARGET="${CTARGET}-unknown-linux-gnueabi";;
-			aarch64*|alpha*|cris*|hppa*|ia64*|m68*|mips*|powerpc*|sparc*|sh*|tile*)
+			aarch64*|alpha*|cris*|hppa*|ia64*|m68*|mips*|powerpc*|riscv*|sparc*|sh*|tile*)
 				CTARGET="${CTARGET}-unknown-linux-gnu";;
 			bfin*|h8300*|msp430*|nds32*|nios2*|spu*|xc16x*)
 				CTARGET="${CTARGET}-elf";;
