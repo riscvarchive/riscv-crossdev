@@ -54,11 +54,12 @@ cross_wrap_etc()
 
 	LIBC="__LIBC__"
 	case ${CHOST} in
-	*gnu*)    LIBC=glibc ;;
-	*uclibc*) LIBC=uclibc-ng ;;
-	*musl*)   LIBC=musl ;;
-	*cygwin*) LIBC=Cygwin ;;
-	*mingw*)  LIBC=mingw ;;
+	*gnu*)         LIBC=glibc ;;
+	*uclibc*)      LIBC=uclibc-ng ;;
+	*musl*)        LIBC=musl ;;
+	*cygwin*)      LIBC=Cygwin ;;
+	*mingw*)       LIBC=mingw ;;
+	riscv*-*-elf() LIBC=newlib ;;
 	*)        emit_setup_warning "No LIBC is known for this target." ;;
 	esac
 
